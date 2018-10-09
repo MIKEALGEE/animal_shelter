@@ -15,5 +15,12 @@ CREATE TABLE animals (
   training VARCHAR(255),
   adoptable VARCHAR(255),
   admission_date DATE
-  -- customer_id INT8 references customers(id)
+);
+
+
+CREATE TABLE owners
+(
+  id SERIAL8 primary key,
+  customer_id INT8 references customers(id),
+  animal_id INT8 references animals(id)
 );

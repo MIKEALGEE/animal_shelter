@@ -1,8 +1,8 @@
 require_relative('../models/customer.rb')
 require_relative('../models/animal.rb')
+require_relative('../models/owner.rb')
 
-# seeds - prepopulates the database for us.
-
+Owner.delete_all
 Customer.delete_all
 Animal.delete_all
 
@@ -57,3 +57,20 @@ animal3 = Animal.new({
 animal1.save()
 animal2.save()
 animal3.save()
+
+
+
+owner1 = Owner.new({
+  "customer_id" => customer1.id,
+  "animal_id" => animal1.id
+  })
+
+owner2 = Owner.new({
+  "customer_id" => customer2.id,
+  "animal_id" => animal3.id
+  })
+
+owner1.save()
+owner2.save()
+
+owner1.animal
