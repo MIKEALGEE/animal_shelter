@@ -1,0 +1,14 @@
+<h1>All Animals</h1>
+<hr>
+
+<% for animal in @animals %>
+
+<p>Name: <%= animal.animal_name() %></p>
+<p>species: <%= animal.species %> </p>
+<p>age: <%= animal.age %> </p>
+<p>In training: <%= animal.training %> </p>
+<p>Adoptable: <%= animal.adoptable %> </p>
+<p>Date admitted: <%= animal.admission_date %> </p>
+<hr/>
+
+<% end %>
