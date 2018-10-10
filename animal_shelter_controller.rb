@@ -66,8 +66,8 @@ end
 # DELETE
 post("/animal-shelter/:id/delete") do
   id = params[:id].to_i()
-  @pizza = PizzaOrder.find(id).delete()
-  erb(:destroy)
+  @pizza = Animal.find(id).delete()
+  erb(:delete)
 end
 
 

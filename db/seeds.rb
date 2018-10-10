@@ -34,7 +34,8 @@ animal1 = Animal.new({
   "age" => 8,
   "training" => "Yes",
   "adoptable" => "Yes",
-  "admission_date" => "10/22/2018"
+  "admission_date" => "10/22/2018",
+  "description" => "Max is a floof, who is scared of the dark and has explosive diarreah regularly. He can be quite funny, though."
 })
 
 animal2 = Animal.new({
@@ -43,7 +44,8 @@ animal2 = Animal.new({
   "age" => 6,
   "training" => "Yes",
   "adoptable" => "No",
-  "admission_date" => "9/15/2017"
+  "admission_date" => "9/15/2017",
+  "description" => "Jesse's a catnip addict and is usually out on the streets selling her body for cash. She loves to play with cotton balls!"
 })
 
 animal3 = Animal.new({
@@ -52,7 +54,8 @@ animal3 = Animal.new({
   "age" => 14,
   "training" => "Yes",
   "adoptable" => "No",
-  "admission_date" => "2/15/2016"
+  "admission_date" => "2/15/2016",
+  "description" => "Jason loves to eat children so this is worth keeping in mind if you love your kids, if not, make an appointment and be sure to bring them along!"
 })
 
 animal1.save()

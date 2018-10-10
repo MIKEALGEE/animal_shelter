@@ -2,14 +2,17 @@
 <form method="POST" action="/animal-shelter/animal-submitted">
   <label for="animal-name-field">Animal Name (if they have one):</label>
   <input type="text" name="animal_name" id="animal-name-field" />
+
   <label for="species-field">Species:</label>
   <input type="text" name="species" id="species-field" />
+
   <label for="age">Age (if known):</label>
   <input
     type="number"
     name="age" value= 1 min= 1 id="age">
     <label for="submission_date">Date Submitted:</label>
     <input type="text" name="submission_date" id="date-submitted-field" value ="<%= Date.today %>" />
+
       <input type="submit" name="" value="Submit Animal">
 
 </form>

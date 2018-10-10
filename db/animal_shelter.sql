@@ -1,5 +1,8 @@
+DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS animals;
+
+
 
 CREATE TABLE customers (
   id SERIAL4 PRIMARY KEY,
@@ -14,9 +17,9 @@ CREATE TABLE animals (
   age INT2,
   training VARCHAR(255),
   adoptable VARCHAR(255),
-  admission_date DATE
+  admission_date DATE,
+  description VARCHAR(255)
 );
-
 
 CREATE TABLE owners
 (

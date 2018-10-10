@@ -6,10 +6,14 @@
 <p>In training: <%= @animal.training %> </p>
 <p>Adoptable: <%= @animal.adoptable %> </p>
 <p>Date admitted: <%= @animal.admission_date %> </p>
+<p>Creature Description: <%=@animal.description %> </p>
 <p></p>
+
 <form action="/animal-shelter/<%= @animal.id %>/delete" method="POST">
   <input type="submit" name="" value="Delete Creature">
 </form>
+
 <form action ="/animal-shelter/<%= @animal.id %>/update"method='GET' >
+
 <input type="submit" name="" value="Update Creature">
 </form>

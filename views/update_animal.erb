@@ -1,24 +1,34 @@
 <h1>Creature Update</h1>
 <form method="POST" action="/animal-shelter/<%=@animal.id%>/animal-updated">
+
   <label for="animal-name-field">Creature Name:</label>
   <input type="text" name="animal_name" id="animal-name-field" value="<%= @animal.animal_name %>"/>
+
   <label for="species-field">Species:</label>
   <input type="text" name="species" id="species-field" value="<%= @animal.species %>" />
+
   <label for="age-field">Quantity:</label>
   <input
     type="number"
     name="age" value= "<%= @animal.age %>" min= 1 id="age-field">
-    <label for="adbmission_date">Date Submitted:</label>
+
+    <label for="admission_date">Date Submitted:</label>
     <input type="text" name="admission_date" id="date-submitted-field" value ="<%= Date.today %>" />
+
   <label for="training-select">Does the Creature require training?:</label>
   <select class="" name="training" id="training-select" value="<%= @animal.training % selected>">
     <option value="Yes">Yes</option>
       <option value="No">No</option>
     </select>
+
   <label for="adoptable-select">is the Creature Adoptable?:</label>
   <select class="" name="adoptable" id="adoptable-select" value="<%= @animal.adoptable % selected>">
     <option value="Yes">Yes</option>
       <option value="No">No</option>
     </select>
+
+    <label for ="description"> Please add a short description for this Creature:</label>
+    <input type ="text" name ="description" id="description-field"/>
     <input type="submit" name="" value="Update Creature">
+
 </form>
