@@ -1,0 +1,15 @@
+<h1>Creature Details!</h1>
+<hr>
+<p><%= @animal.animal_name() %>
+<p>species: <%= @animal.species %> </p>
+<p>age: <%= @animal.age %> </p>
+<p>In training: <%= @animal.training %> </p>
+<p>Adoptable: <%= @animal.adoptable %> </p>
+<p>Date admitted: <%= @animal.admission_date %> </p>
+<p></p>
+<form action="/animal-shelter/<%= @animal.id %>/delete" method="POST">
+  <input type="submit" name="" value="Delete Creature">
+</form>
+<form action ="/animal-shelter/<%= @animal.id %>/update"method='GET' >
+<input type="submit" name="" value="Update Creature">
+</form>

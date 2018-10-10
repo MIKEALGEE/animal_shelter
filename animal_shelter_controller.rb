@@ -1,41 +1,66 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
+require_relative( './models/owner.rb' )
 require_relative( './models/animal.rb' )
 require_relative( './models/customer.rb' )
 also_reload( './models/*' )
 
+#HOME PAGE
+
 get("/") do
   erb(:home)
 end
+
+#SHOWING LIST OF ALL CUSTOMERS
 
 get("/customer-list") do
   @customers = Customer.all()
   erb(:customers)
 end
 
+#SHOWING LIST OF ALL ANIMALS
+
 get("/animal-shelter") do
   @animals = Animal.all()
   erb(:animals)
 end
 
-# NEW
+#CREATING ANIMAL
 get("/animal-shelter/new") do
   erb(:new_animal)
 end
 
-#CREATE
+#SAVING NEW ANIMAL
+
 post("/animal-shelter/animal-submitted") do
   @animal = Animal.new(params)
   @animal.save()
   erb(:animal_submitted)
 end
 
+#VIEWING ANIMAL
+
+get("/animal-shelter/:id/view") do
+  id = params[:id].to_i()
+  @animal = Animal.find(id)
+  erb(:view_animal)
+end
+
+#UPDATING ANIMAL
+
 get("/animal-shelter/:id/update") do
   id = params[:id].to_i()
   @animal = Animal.find(id)
   erb(:update_animal)
 end
+
+
+# get("/animal-shelter/:id/view") do
+#   id = params[:id].to_i()
+#   @animal = Animal.find(id)
+#   erb(:view_animal)
+# end
 
 # # SHOW
 # # id will take ANYTHING - so this needs to go lower in the priority.
