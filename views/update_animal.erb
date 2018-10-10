@@ -1,5 +1,5 @@
 <h1>Creature Update</h1>
-<form method="POST" action="/animal-updated">
+<form method="POST" action="/animal-shelter/<%=@animal.id%>/animal-updated">
   <label for="animal-name-field">Creature Name:</label>
   <input type="text" name="animal_name" id="animal-name-field" value="<%= @animal.animal_name %>"/>
   <label for="species-field">Species:</label>
@@ -8,6 +8,8 @@
   <input
     type="number"
     name="age" value= "<%= @animal.age %>" min= 1 id="age-field">
+    <label for="adbmission_date">Date Submitted:</label>
+    <input type="text" name="admission_date" id="date-submitted-field" value ="<%= Date.today %>" />
   <label for="training-select">Does the Creature require training?:</label>
   <select class="" name="training" id="training-select" value="<%= @animal.training % selected>">
     <option value="Yes">Yes</option>

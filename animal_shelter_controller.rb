@@ -1,9 +1,11 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
+require('active_support/core_ext/date')
 require_relative( './models/owner.rb' )
 require_relative( './models/animal.rb' )
 require_relative( './models/customer.rb' )
+
 also_reload( './models/*' )
 
 #HOME PAGE
@@ -54,6 +56,25 @@ get("/animal-shelter/:id/update") do
   @animal = Animal.find(id)
   erb(:update_animal)
 end
+
+post("/animal-shelter/:id/animal-updated") do
+  id = params[:id].to_i
+  Animal.new(params).update
+  erb(:animal_updated)
+end
+
+# DELETE
+post("/animal-shelter/:id/delete") do
+  id = params[:id].to_i()
+  @pizza = PizzaOrder.find(id).delete()
+  erb(:destroy)
+end
+
+
+# post '/pizza-orders/:id' do # update
+#   PizzaOrder.new( params ).update
+#   redirect to '/pizza-orders'
+# end
 
 
 # get("/animal-shelter/:id/view") do
