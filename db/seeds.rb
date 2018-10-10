@@ -1,6 +1,7 @@
 require_relative('../models/customer.rb')
 require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
+require("pry")
 
 Owner.delete_all
 Customer.delete_all
@@ -32,7 +33,7 @@ animal1 = Animal.new({
   "species" => "Dog",
   "age" => 8,
   "training" => "Yes",
-  "adoptable" => "No",
+  "adoptable" => "Yes",
   "admission_date" => "10/22/2018"
 })
 
@@ -72,5 +73,3 @@ owner2 = Owner.new({
 
 owner1.save()
 owner2.save()
-
-owner1.animal

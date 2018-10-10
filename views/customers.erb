@@ -1,0 +1,9 @@
+<h1>All Customers</h1>
+<hr>
+
+<% for customer in @customers %>
+
+<p>Name: <%= customer.pretty_name() %></p>
+<hr/>
+
+<% end %>
