@@ -4,11 +4,11 @@
 <% for customer in @customers %>
 
 <div><p>Name: <%= customer.pretty_name() %></p></div>
-<div><p><a href="/animal-shelter/customer/<%= customer.id %>/view">View Customer details</a> </p></div>
+<div class = "viewcusbutton"><p><a href="/animal-shelter/customer/<%= customer.id %>/view">View Customer details</a> </p></div>
 <hr/>
 
 <% end %>
 
-<div><ul>
+<div class = "newcusbutton"><ul>
   <li><a href="/animal-shelter/customer/new">Add a new customer </a></li>
 </ul></div>
