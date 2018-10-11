@@ -20,7 +20,8 @@ CREATE TABLE animals (
   training VARCHAR(255),
   adoptable VARCHAR(255),
   admission_date DATE,
-  description VARCHAR(255)
+  description VARCHAR(255),
+  image bytea
 );
 
 CREATE TABLE owners
