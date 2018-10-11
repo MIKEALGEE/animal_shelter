@@ -63,46 +63,53 @@ post("/animal-shelter/:id/animal-updated") do
   erb(:animal_updated)
 end
 
-# DELETE
+# DELETE ANIMAL
 post("/animal-shelter/:id/delete") do
   id = params[:id].to_i()
-  @pizza = Animal.find(id).delete()
+  @animal = Animal.find(id).delete()
   erb(:delete)
 end
 
+#START OF CUSTOMER CONTROLS
 
-# post '/pizza-orders/:id' do # update
-#   PizzaOrder.new( params ).update
-#   redirect to '/pizza-orders'
-# end
+#CREATING CUSTOMER
+get("/animal-shelter/customer/new") do
+  erb(:new_customer)
+end
 
+#SAVING NEW CUSTOMER
 
-# get("/animal-shelter/:id/view") do
-#   id = params[:id].to_i()
-#   @animal = Animal.find(id)
-#   erb(:view_animal)
-# end
+post("/animal-shelter/customer/customer-saved") do
+  @customer = Customer.new(params)
+  @customer.save()
+  erb(:save_customer)
+end
 
-# # SHOW
-# # id will take ANYTHING - so this needs to go lower in the priority.
-# get("/pizza-orders/:id") do
-#   id = params[:id].to_i()
-#   @pizza = PizzaOrder.find(id)
-#   erb(:show)
-# end
-#
-# #CREATE
-# post("/pizza-orders") do
-#   @pizza = PizzaOrder.new(params)
-#   @pizza.save()
-#   erb(:create)
-# end
-#
-# # DELETE
-# post("/pizza-orders/:id/delete") do
-#   id = params[:id].to_i()
-#   @pizza = PizzaOrder.find(id).delete()
-#   erb(:destroy)
-# end
-#
-#
+#VIEWING CUSTOMER
+
+get("/animal-shelter/customer/:id/view") do
+  id = params[:id].to_i()
+  @customer = Customer.find(id)
+  erb(:view_customer)
+end
+
+#UPDATING CUSTOMER
+
+get("/animal-shelter/customer/:id/update") do
+  id = params[:id].to_i()
+  @customer = Customer.find(id)
+  erb(:update_customer)
+end
+
+post("/animal-shelter/customer/:id/customer-updated") do
+  id = params[:id].to_i
+  Customer.new(params).update
+  erb(:customer_updated)
+end
+
+# DELETE CUSTOMER
+post("/animal-shelter/customer/:id/delete") do
+  id = params[:id].to_i()
+  @customer = Customer.find(id).delete()
+  erb(:delete_customer)
+end

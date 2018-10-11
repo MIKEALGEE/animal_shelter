@@ -60,4 +60,19 @@ class Owner
     SqlRunner.run( sql, values )
   end
 
+  def self.find (id)
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [id]
+    owner = SqlRunner.run(sql,values)
+    result = Owner.new(owner.first)
+    return result
+  end
+
+  def delete()
+    sql = "DELETE FROM owners
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 end

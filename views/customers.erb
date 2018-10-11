@@ -4,6 +4,11 @@
 <% for customer in @customers %>
 
 <p>Name: <%= customer.pretty_name() %></p>
+<p><a href="/animal-shelter/customer/<%= customer.id %>/view">View Customer details</a> </p>
 <hr/>
 
 <% end %>
+
+<ul>
+  <li><a href="/animal-shelter/customer/new">Add a new customer </a></li>
+</ul>

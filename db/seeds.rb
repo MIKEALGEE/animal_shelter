@@ -9,17 +9,23 @@ Animal.delete_all
 
 customer1 = Customer.new({
   "first_name" => "Mike",
-  "last_name" => "Griffin"
+  "last_name" => "Griffin",
+  "appointment" => "07/12/2018",
+  "requirements" => "Needs to be good with children"
   })
 
 customer2 = Customer.new({
   "first_name" => "Wee",
-  "last_name" => "Dave"
+  "last_name" => "Dave",
+  "appointment" => "06/11/2018",
+  "requirements" => "Needs to be house trained"
   })
 
 customer3 = Customer.new({
   "first_name" => "Captain",
-  "last_name" => "Hook"
+  "last_name" => "Hook",
+  "appointment" => "05/12/2018",
+  "requirements" => "Disabled, looking for a creature that can help with daily tasks."
   })
 
 customer1.save()

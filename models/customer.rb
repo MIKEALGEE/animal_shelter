@@ -2,12 +2,14 @@ require_relative('../db/sql_runner')
 
 class Customer
   attr_reader   :id
-  attr_accessor :first_name, :last_name
+  attr_accessor :first_name, :last_name, :appointment, :requirements
 
   def initialize(options)
     @id = options["id"].to_i
     @first_name = options["first_name"]
     @last_name = options["last_name"]
+    @appointment = options["appointment"]
+    @requirements = options["requirements"]
   end
 
   def pretty_name()
@@ -18,14 +20,16 @@ class Customer
   sql = "INSERT INTO customers
   (
     first_name,
-    last_name
+    last_name,
+    appointment,
+    requirements
   )
   VALUES
   (
-    $1, $2
+    $1, $2, $3, $4
   )
   RETURNING *"
-  values = [@first_name, @last_name]
+  values = [@first_name, @last_name, @appointment, @requirements]
   customer_data = SqlRunner.run(sql, values)
   @id = customer_data.first()['id'].to_i
   end
@@ -35,11 +39,13 @@ class Customer
     SET
       (
       first_name,
-      last_name
+      last_name,
+      appointment,
+      requirements
       ) =
-      ( $1, $2)
-        WHERE id = $3"
-    values = [@first_name, @last_name, @id]
+      ( $1, $2, $3, $4)
+        WHERE id = $5"
+    values = [@first_name, @last_name, @appointment, @requirements, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -69,6 +75,7 @@ class Customer
     result = Customer.new(customer.first)
     return result
   end
+
 
 
 end
