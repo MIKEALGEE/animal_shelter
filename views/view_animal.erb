@@ -1,19 +1,19 @@
-<h1>Creature Details!</h1>
+<div><h1>Creature Details!</h1></div>
 <hr>
-<p><%= @animal.animal_name() %>
-<p>species: <%= @animal.species %> </p>
-<p>age: <%= @animal.age %> </p>
-<p>In training: <%= @animal.training %> </p>
-<p>Adoptable: <%= @animal.adoptable %> </p>
-<p>Date admitted: <%= @animal.admission_date %> </p>
-<p>Creature Description: <%=@animal.description %> </p>
+<div><p><%= @animal.animal_name() %></div>
+<div><p>species: <%= @animal.species %> </p></div>
+<div><p>age: <%= @animal.age %> </p></div>
+<div><p>In training: <%= @animal.training %> </p></div>
+<div><p>Adoptable: <%= @animal.adoptable %> </p></div>
+<div><p>Date admitted: <%= @animal.admission_date %> </p></div>
+<div><p>Creature Description: <%=@animal.description %> </p></div>
 <p></p>
 
-<form action="/animal-shelter/<%= @animal.id %>/delete" method="POST">
+<div><form action="/animal-shelter/<%= @animal.id %>/delete" method="POST">
   <input type="submit" name="" value="Delete Creature">
-</form>
+</form></div>
 
-<form action ="/animal-shelter/<%= @animal.id %>/update"method='GET' >
+<div><form action ="/animal-shelter/<%= @animal.id %>/update"method='GET' ></div>
 
-<input type="submit" name="" value="Update Creature">
+<div><input type="submit" name="" value="Update Creature"></div>
 </form>

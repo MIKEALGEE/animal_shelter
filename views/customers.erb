@@ -1,14 +1,14 @@
-<h1>All Customers</h1>
+<div><h1>All Customers</h1></div>
 <hr>
 
 <% for customer in @customers %>
 
-<p>Name: <%= customer.pretty_name() %></p>
-<p><a href="/animal-shelter/customer/<%= customer.id %>/view">View Customer details</a> </p>
+<div><p>Name: <%= customer.pretty_name() %></p></div>
+<div><p><a href="/animal-shelter/customer/<%= customer.id %>/view">View Customer details</a> </p></div>
 <hr/>
 
 <% end %>
 
-<ul>
+<div><ul>
   <li><a href="/animal-shelter/customer/new">Add a new customer </a></li>
-</ul>
+</ul></div>

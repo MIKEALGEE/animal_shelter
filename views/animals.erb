@@ -1,15 +1,16 @@
-<h1>All Animals</h1>
+<h1>All Creatures</h1>
 <hr>
 
 <% for animal in @animals %>
 
-<p>Name: <%= animal.animal_name() %></p>
-<p>species: <%= animal.species %> </p>
-<p>age: <%= animal.age %> </p>
-<p>In training: <%= animal.training %> </p>
-<p>Adoptable: <%= animal.adoptable %> </p>
-<p>Date admitted: <%= animal.admission_date %> </p>
-<p><a href="/animal-shelter/<%= animal.id %>/view">View Creature details</a> </p>
+<div><p>Name: <%= animal.animal_name() %></p></div>
+<div><p>species: <%= animal.species %> </p></div>
+<div><p>age: <%= animal.age %> </p></div>
+<div><p>In training: <%= animal.training %> </p></div>
+<div><p>Adoptable: <%= animal.adoptable %> </p></div>
+<div><p>Date admitted: <%= animal.admission_date %> </p></div>
+<div><p>Owner: <%= animal.owner%></p></div>
+<div><p><a href="/animal-shelter/<%= animal.id %>/view">View Creature details</a> </p></div>
 <hr/>
 
 <% end %>

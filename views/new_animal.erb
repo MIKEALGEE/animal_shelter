@@ -1,18 +1,18 @@
-<h1>Animal submission</h1>
+<div><h1>Animal submission</h1></div>
 <form method="POST" action="/animal-shelter/animal-submitted">
-  <label for="animal-name-field">Animal Name (if they have one):</label>
-  <input type="text" name="animal_name" id="animal-name-field" />
+  <div><label for="animal-name-field">Animal Name (if they have one):</label></div>
+  <div><input type="text" name="animal_name" id="animal-name-field" /></div>
 
-  <label for="species-field">Species:</label>
-  <input type="text" name="species" id="species-field" />
+  <div><label for="species-field">Species:</label>
+  <input type="text" name="species" id="species-field" /></div>
 
-  <label for="age">Age (if known):</label>
+  <div><label for="age">Age (if known):</label>
   <input
     type="number"
-    name="age" value= 1 min= 1 id="age">
-    <label for="submission_date">Date Submitted:</label>
-    <input type="text" name="submission_date" id="date-submitted-field" value ="<%= Date.today %>" />
+    name="age" value= 1 min= 1 id="age"></div>
+    <div><label for="submission_date">Date Submitted:</label>
+    <input type="text" name="submission_date" id="date-submitted-field" value ="<%= Date.today %>" /></div>
 
-      <input type="submit" name="" value="Submit Animal">
+      <div><input type="submit" name="" value="Submit Animal"></div>
 
 </form>

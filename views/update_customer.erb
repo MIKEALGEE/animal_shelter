@@ -1,5 +1,5 @@
-<h1>Customer Update</h1>
-<form method="POST" action="/animal-shelter/customer/<%=@customer.id%>/customer-updated">
+<div><h1>Customer Update</h1></div>
+<div><form method="POST" action="/animal-shelter/customer/<%=@customer.id%>/customer-updated">
 
   <label for="first-name-field">First Name:</label>
   <input type="text" name="first_name" id="first-name-field" value="<%= @customer.first_name %>"/>
@@ -14,4 +14,4 @@
     <input type ="text" name ="requirements" id="requirements-field" value ="<%= @customer.requirements %>"/>
     <input type="submit" name="" value="Update Customer">
 
-</form>
+</form></div>

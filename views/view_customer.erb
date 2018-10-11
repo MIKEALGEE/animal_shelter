@@ -1,15 +1,15 @@
-<h1>Customer Details</h1>
+<div><h1>Customer Details</h1></div>
 <hr>
-<p><%= @customer.pretty_name() %>
-<p>appointment date: <%= @customer.appointment %> </p>
-<p>Requirements: <%= @customer.requirements %> </p>
-<p></p>
+<div><p><%= @customer.pretty_name() %></div>
+<div><p>appointment date: <%= @customer.appointment %> </p></div>
+<div><p>Requirements: <%= @customer.requirements %> </p></div>
+<div><p></p>
 
-<form action="/animal-shelter/customer/<%= @customer.id %>/delete" method="POST">
+<div><form action="/animal-shelter/customer/<%= @customer.id %>/delete" method="POST">
   <input type="submit" name="" value="Delete Customer">
-</form>
+</form></div>
 
-<form action ="/animal-shelter/customer/<%= @customer.id %>/update"method='GET' >
+<div><form action ="/animal-shelter/customer/<%= @customer.id %>/update"method='GET' ></div>
 
-<input type="submit" name="" value="Update Customer">
+<div><input type="submit" name="" value="Update Customer"></div>
 </form>
