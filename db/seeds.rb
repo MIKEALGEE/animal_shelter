@@ -41,7 +41,9 @@ animal1 = Animal.new({
   "training" => "Yes",
   "adoptable" => "Yes",
   "admission_date" => "10/22/2018",
-  "description" => "Max is a good boy."
+  "description" => "Max is a good boy, we'll leave it at that.",
+  "image" => "/max.jpg",
+  "video" => "https://onedrive.live.com/embed?cid=0BAA04BE5BBBBD37&resid=BAA04BE5BBBBD37%21148&authkey=ABiZTsaQVJx41O0"
   })
 
 
@@ -52,7 +54,9 @@ animal2 = Animal.new({
   "training" => "Yes",
   "adoptable" => "No",
   "admission_date" => "9/15/2017",
-  "description" => "Jesse's a catnip addict and is usually out on the streets selling her body for cash. She loves to play with cotton balls!"
+  "description" => " Jesse loves to play with cotton balls, and snort Catnip on a Saturday night! ",
+  "image" => "/jesse.jpg",
+  "video" => "https://onedrive.live.com/embed?cid=0BAA04BE5BBBBD37&resid=BAA04BE5BBBBD37%21147&authkey=AFICJMmZztaXXJA"
 })
 
 animal3 = Animal.new({
@@ -62,24 +66,39 @@ animal3 = Animal.new({
   "training" => "Yes",
   "adoptable" => "No",
   "admission_date" => "2/15/2016",
-  "description" => "Jason loves to eat children so this is worth keeping in mind if you love your kids, if not, make an appointment and be sure to bring them along!"
+  "description" => "Jason loves to eat children so this is worth keeping in mind if you love your kids, if not, make an appointment and be sure to bring them along!",
+  "image" => "/jason.jpg",
+  "video" => "https://onedrive.live.com/embed?cid=0BAA04BE5BBBBD37&resid=BAA04BE5BBBBD37%21146&authkey=ALT1cEvKP2iYy5s"
+})
+
+animal4 = Animal.new({
+  "animal_name" => "Floaty Potato",
+  "species" => "Manatee",
+  "age" => 3,
+  "training" => "No",
+  "adoptable" => "Yes",
+  "admission_date" => "01/09/2016",
+  "description" => "Floaty loves swimming into walls face first, it's his favourite game! We've been ignoring reports that he's blind! ",
+  "image" => "/floatypotato.jpg",
+  "video" =>"https://onedrive.live.com/embed?cid=0BAA04BE5BBBBD37&resid=BAA04BE5BBBBD37%21145&authkey=ANJ3-6FhkG8ei2Q",
 })
 
 animal1.save()
 animal2.save()
 animal3.save()
+animal4.save()
 
 
 
-owner1 = Owner.new({
-  "customer_id" => customer1.id,
-  "animal_id" => animal1.id
-  })
-
-owner2 = Owner.new({
-  "customer_id" => customer2.id,
-  "animal_id" => animal3.id
-  })
-
-owner1.save()
-owner2.save()
+# owner1 = Owner.new({
+#   "customer_id" => customer1.id,
+#   "animal_id" => animal1.id
+#   })
+#
+# owner2 = Owner.new({
+#   "customer_id" => customer2.id,
+#   "animal_id" => animal3.id
+#   })
+#
+# owner1.save()
+# owner2.save()

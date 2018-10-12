@@ -20,7 +20,9 @@ CREATE TABLE animals (
   training VARCHAR(255) NULL,
   adoptable VARCHAR(255) NULL,
   admission_date DATE NULL,
-  description VARCHAR(255) NULL
+  description VARCHAR(255) NULL,
+  image VARCHAR(255) NULL,
+  video VARCHAR(255) NULL
 );
 
 CREATE TABLE owners(

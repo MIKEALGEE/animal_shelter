@@ -235,3 +235,7 @@ input[type=submit] {
   cursor: pointer;
   float: right;
 }
+
+.holds-the-iframe {
+  background:url(/loader.gif) center center no-repeat;
+ }

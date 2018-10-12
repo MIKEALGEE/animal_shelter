@@ -9,7 +9,8 @@
     <p>In training: <%= animal.training %> </p>
     <p>Adoptable: <%= animal.adoptable %> </p>
     <p>Date Admitted: <%= animal.admission_date %> </p>
-    <img id="weeguy" src = "/creature.png" >
+    <img class="creatureimage" src="<%= animal.image%>" onerror="this.src = '/creature.png'" width="250"/>
+    <!-- <img id="weeguy" src = "/creature.png" > -->
     <p id ="viewcreature"><a href="/animal-shelter/<%= animal.id %>/view">View Creature details</a> </p></div>
 <hr/>
 

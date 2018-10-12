@@ -10,7 +10,7 @@ class Customer
     @last_name = options["last_name"]
     @appointment = options["appointment"]
     @requirements = options["requirements"]
-    @
+    
   end
 
   def pretty_name()

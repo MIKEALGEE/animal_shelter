@@ -9,7 +9,9 @@
 <p>Date admitted: <%= @animal.admission_date %> </p>
 <p>Creature Description:</p></div>
 <div id ="crdesc"><p><%=@animal.description %> </p></div>
-<p></p>
+
+<iframe width="560" height="315" src="<%=@animal.video%>" frameborder="0" allowfullscreen></iframe>
+<!-- <div class = "video"> <iframe src="<%=@animal.video%>"width="320" height="240" frameborder="0" scrolling="no"></iframe> -->
 
 <div><form action="/animal-shelter/<%= @animal.id %>/delete" method="POST">
   <input type="submit" name="" value="Delete Creature">
