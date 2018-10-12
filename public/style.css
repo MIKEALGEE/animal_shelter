@@ -1,35 +1,66 @@
-/* body{
-  background-color:  #90EE90;
-} */
 
 label {
-color: #FFD700;
+color: white;
+font-size: 20px;
 font-weight: bold;
 display: block;
-width: 150px;
+width: 300px;
 position: relative;
 text-align: left;
 padding: 12px 12px 12px 0;
 }
 
 p{
-  color :#FFD700;
+  color :white;
+  font-size: 20px;
+  font-wieght: bold;
 }
 
 h1{
-  color:#FFD700;
+  color: #FFD700;
 }
 
 h2{
-  color:#FFD700;
+  color: white;
 }
 
-p {
-  color: #FFD700;
+
+img#weeguy{
+  width: 200px;
+  height: 200px;
 }
 
 .cdetails{
   color #FFD700;
+}
+
+#viewcreature{
+  background-color: #303235;
+  background-image: linear-gradient(to bottom,#303235 0,#090c0d 100%);
+  color: #303235;
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+#requirements{
+}
+
+#cusinfo{
+  background-color: #185409;
+}
+
+.creature{
+  background-color: darkgreen;
+}
+
+.customer{
+  background-color: darkgreen;
 }
 
 input[type = submit]:hover {
@@ -77,55 +108,109 @@ body {
    background-size: cover;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+li#nav_bar {
+  background-color: #303235;
+  background-image: linear-gradient(to bottom,#303235 0,#090c0d 100%);
+  color: #303235;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  z-index: 4;
 }
 
-li {
-    float: left;
+a
+{
+  text-decoration: none;
+  color: #ffffff;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+a
+{
+  text-decoration: none;
+  color: #ffffff;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+ul
+{
+  list-style-type: none;
+  margin: 15px 15px;
 }
 
-.homepage_heading{
-  position: relative;
+ul#newcus{
+  font-family: 'Gotham Pro',sans-serif;
+  padding: 0px 15px;
+  font: bold 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white ;
+  padding: 12px 12px 10px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+li.buttons
+{
+  float: right;
+  font-family: 'Gotham Pro',sans-serif;
+  padding: 0px 15px;
+  font: bold 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white ;
+  padding: 12px 12px 10px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+div#crdesc{
+  font-family: 'Gotham Pro',sans-serif;
+  padding: 0px 15px;
+  font: bold 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white ;
+  padding: 12px 12px 10px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 
 }
 
-.newcusbutton{
-width: 100%;
-float: left;
-margin: 0 0 1em 0;
-padding: 0px;
-border-bottom: 5px solid #4c4c4c;
-position:absolute;
-top:0;
+div#credet{
+  font-family: 'Gotham Pro',sans-serif;
+  padding: 0px 15px;
+  font: bold 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white ;
+  padding: 12px 12px 10px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 
-.navbar {
 
-    width: 100%;
-    float: left;
-    margin: 0 0 1em 0;
-    padding: 0px;
-    border-bottom: 5px solid #4c4c4c;
-    position:absolute;
-    bottom:0;
+.viewcusbutton{
+  width: 100%;
+  background-color: seagreen;
+  color: black;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 }
 
 /* forms */
@@ -141,6 +226,7 @@ input[type=text], select, textarea{
 }
 
 input[type=submit] {
+  font-size: 30px;
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;

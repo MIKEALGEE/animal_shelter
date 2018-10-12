@@ -6,27 +6,25 @@ DROP TABLE IF EXISTS animals;
 
 CREATE TABLE customers (
   id SERIAL4 PRIMARY KEY,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255),
-  appointment VARCHAR(255),
-  requirements VARCHAR(255)
+  first_name VARCHAR(255) NULL,
+  last_name VARCHAR(255) NULL,
+  appointment VARCHAR(255) NULL,
+  requirements VARCHAR(255) NULL
 );
 
 CREATE TABLE animals (
   id SERIAL4 PRIMARY KEY,
-  animal_name VARCHAR(255),
-  species VARCHAR(255),
-  age INT2,
-  training VARCHAR(255),
-  adoptable VARCHAR(255),
-  admission_date DATE,
-  description VARCHAR(255),
-  image bytea
+  animal_name VARCHAR(255) NULL,
+  species VARCHAR(255) NULL,
+  age INT2 NULL,
+  training VARCHAR(255) NULL,
+  adoptable VARCHAR(255) NULL,
+  admission_date DATE NULL,
+  description VARCHAR(255) NULL
 );
 
-CREATE TABLE owners
-(
-  id SERIAL8 primary key,
-  customer_id INT8 references customers(id),
-  animal_id INT8 references animals(id)
-);
+CREATE TABLE owners(
+  id SERIAL8 PRIMARY KEY,
+  customers_id INT8 REFERENCES  customers(id) ON DELETE CASCADE,
+  animals_id INT8 REFERENCES animals(id) ON DELETE CASCADE
+)

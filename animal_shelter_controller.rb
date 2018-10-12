@@ -21,6 +21,13 @@ get("/customer-list") do
   erb(:customers)
 end
 
+#SHOWING LIST OF ALL OWNERS
+
+get("/owners") do
+  @owners = Owner.all()
+  erb(:view_owners)
+end
+
 #SHOWING LIST OF ALL ANIMALS
 
 get("/animal-shelter") do
@@ -92,6 +99,7 @@ get("/animal-shelter/customer/:id/view") do
   @customer = Customer.find(id)
   erb(:view_customer)
 end
+
 
 #UPDATING CUSTOMER
 

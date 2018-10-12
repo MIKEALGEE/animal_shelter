@@ -3,14 +3,14 @@
 
 <% for animal in @animals %>
 
-<div><p>Name: <%= animal.animal_name() %></p></div>
-<div><p>species: <%= animal.species %> </p></div>
-<div><p>age: <%= animal.age %> </p></div>
-<div><p>In training: <%= animal.training %> </p></div>
-<div><p>Adoptable: <%= animal.adoptable %> </p></div>
-<div><p>Date admitted: <%= animal.admission_date %> </p></div>
-<div><p>Owner: <%= animal.owner%></p></div>
-<div><p><a href="/animal-shelter/<%= animal.id %>/view">View Creature details</a> </p></div>
+    <div class = "creature"><p>Name: <%= animal.animal_name() %></p>
+    <p>Species: <%= animal.species %> </p>
+    <p>Age: <%= animal.age %> </p>
+    <p>In training: <%= animal.training %> </p>
+    <p>Adoptable: <%= animal.adoptable %> </p>
+    <p>Date Admitted: <%= animal.admission_date %> </p>
+    <img id="weeguy" src = "/creature.png" >
+    <p id ="viewcreature"><a href="/animal-shelter/<%= animal.id %>/view">View Creature details</a> </p></div>
 <hr/>
 
 <% end %>

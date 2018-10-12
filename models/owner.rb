@@ -40,12 +40,9 @@ class Owner
     return Customer.new( results.first )
   end
 
-  def animal()
-    sql = "SELECT * FROM animals
-    WHERE id = $1"
-    values = [@animal_id]
-    results = SqlRunner.run( sql, values )
-    return Animal.new( results.first )
+  def details
+    owner = Owner.find(@customer_id)
+    return owner.pretty_name
   end
 
   def self.delete_all()

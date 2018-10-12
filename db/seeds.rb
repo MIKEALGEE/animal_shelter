@@ -41,8 +41,8 @@ animal1 = Animal.new({
   "training" => "Yes",
   "adoptable" => "Yes",
   "admission_date" => "10/22/2018",
-  "description" => "Max is a good boy.",
-  "image" => "load_file(/max.jpg)"})
+  "description" => "Max is a good boy."
+  })
 
 
 animal2 = Animal.new({

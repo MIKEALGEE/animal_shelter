@@ -25,6 +25,7 @@ class Animal
       adoptable,
       admission_date,
       description
+
     )
     VALUES
     (  $1, $2, $3, $4, $5, $6, $7)
@@ -45,6 +46,7 @@ class Animal
       adoptable,
       admission_date,
       description
+
       ) =
       ( $1, $2, $3, $4, $5, $6, $7)
         WHERE id = $8"
